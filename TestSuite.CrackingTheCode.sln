@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSuite.CrackingTheCode.ReadThrough.Test", "TestSuite.CrackingTheCode.ReadThrough.Test\TestSuite.CrackingTheCode.ReadThrough.Test.csproj", "{FBBD21F6-007F-457F-9DAF-31E2F7DF93B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSuite.CrackingTheCode.ReadThrough", "TestSuite.CrackingTheCode.ReadThrough\TestSuite.CrackingTheCode.ReadThrough.csproj", "{6DC330CC-39B0-4E90-B842-0788274B6BA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBBD21F6-007F-457F-9DAF-31E2F7DF93B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBD21F6-007F-457F-9DAF-31E2F7DF93B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBD21F6-007F-457F-9DAF-31E2F7DF93B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBD21F6-007F-457F-9DAF-31E2F7DF93B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC330CC-39B0-4E90-B842-0788274B6BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC330CC-39B0-4E90-B842-0788274B6BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC330CC-39B0-4E90-B842-0788274B6BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC330CC-39B0-4E90-B842-0788274B6BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

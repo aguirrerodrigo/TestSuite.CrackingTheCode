@@ -43,7 +43,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.TechnicalQuestions
         public void TestBruteForce_Mid()
         {
             // Arrange
-            var s = "cbabadcbb";
+            var s = "cbabadcbbabb";
             var b = "cbabadcbbabbcbabaabccbabc";
 
             // Act
@@ -80,7 +80,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.TechnicalQuestions
         public void TestOptimized_Mid()
         {
             // Arrange
-            var s = "cbabadcbb";
+            var s = "cbabadcbbabb";
             var b = "cbabadcbbabbcbabaabccbabc";
 
             // Act

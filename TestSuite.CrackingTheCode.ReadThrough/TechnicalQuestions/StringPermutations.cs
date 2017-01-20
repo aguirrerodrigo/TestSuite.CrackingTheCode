@@ -28,7 +28,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.TechnicalQuestions
             return result.ToArray();
         }
 
-        private HashSet<string> Perms(string s, HashSet<string> perms)
+        private IEnumerable<string> Perms(string s, IEnumerable<string> perms)
         {
             var result = new HashSet<string>();
 

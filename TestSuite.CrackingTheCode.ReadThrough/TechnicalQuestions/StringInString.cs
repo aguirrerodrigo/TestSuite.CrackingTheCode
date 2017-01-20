@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using TestSuite.CrackingTheCode.ReadThrough.Utils;
 
 namespace TestSuite.CrackingTheCode.ReadThrough.TechnicalQuestions
@@ -35,33 +36,77 @@ namespace TestSuite.CrackingTheCode.ReadThrough.TechnicalQuestions
             return result.ToArray();
         }
 
-        private HashSet<string> GetPermutations(string s)
-        {
-            var set = new HashSet<string>();
+        //private HashSet<string> GetPermutations(string s)
+        //{
+        //    var set = new HashSet<string>();
 
-            if (s.Length == 0)
-                return set;
+        //    if (s.Length == 0)
+        //        return set;
+
+        //    if (s.Length == 1)
+        //    {
+        //        set.Add(s);
+        //        return set;
+        //    }
+                
+        //    for (var i = 0; i < s.Length; i++)
+        //    {
+        //        var invariant = s[i];
+        //        var rest = s.Substring(0, i) + s.Substring(i + 1);
+        //        var newPerms = GetPermutations(rest);
+        //        foreach (var perm in newPerms)
+        //        {
+        //            this.Counter.Increment();
+
+        //            set.Add(invariant + perm);
+        //        }
+        //    }
+
+        //    return set;
+        //}
+        //a
+        //ab
+        //ba
+        //c
+        //acb
+        //abc
+        //cba
+        //bca
+        //bac
+        private string[] GetPermutations(string s)
+        {
+            if (s == null || s.Length == 0)
+                return new string[0];
 
             if (s.Length == 1)
+                return new string[] { s };
+
+            var set = new string[] { s.Substring(0, 1) };
+            var perms = GetPerms(s.Substring(1), set);
+
+            return perms.ToArray();
+        }
+
+        private IEnumerable<string> GetPerms(string s, IEnumerable<string> perms)
+        {
+            var result = new HashSet<string>();
+
+            var prefix = s.Substring(0, 1);
+            var remainder = s.Substring(1);
+            if (remainder.Length > 0)
+                perms = GetPerms(remainder, perms);
+
+            foreach(var p in perms)
             {
-                set.Add(s);
-                return set;
-            }
-                
-            for (var i = 0; i < s.Length; i++)
-            {
-                var invariant = s[i];
-                var rest = s.Substring(0, i) + s.Substring(i + 1);
-                var newPerms = GetPermutations(rest);
-                foreach (var perm in newPerms)
+                for(int i = 0; i <= p.Length; i++)
                 {
                     this.Counter.Increment();
 
-                    set.Add(invariant + perm);
+                    result.Add(p.Substring(0, i) + prefix + p.Substring(i));
                 }
             }
 
-            return set;
+            return result;
         }
 
         public int[] Optimized(string s, string b)

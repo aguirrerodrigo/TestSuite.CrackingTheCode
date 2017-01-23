@@ -61,6 +61,7 @@
     <Compile Include="TechnicalQuestions\EqualPolynomialsTest.cs" />
     <Compile Include="TechnicalQuestions\StringInStringTest.cs" />
     <Compile Include="TechnicalQuestions\StringPermutationsTest.cs" />
+    <Compile Include="TechnicalQuestions\TwoSortedArraysTest.cs" />
     <Compile Include="Utils\ArrayAssertExtensions.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -44,9 +44,13 @@
     <Compile Include="BigO\SumOfDigits.cs" />
     <Compile Include="InterviewQuestions\AllUnique.cs" />
     <Compile Include="InterviewQuestions\CheckPermutation.cs" />
+    <Compile Include="InterviewQuestions\Matrix.cs" />
     <Compile Include="InterviewQuestions\OneOrZeroEdits.cs" />
     <Compile Include="InterviewQuestions\PalindromePermutation.cs" />
+    <Compile Include="InterviewQuestions\RotateMatrix.cs" />
+    <Compile Include="InterviewQuestions\StringCompression.cs" />
     <Compile Include="InterviewQuestions\Urlify.cs" />
+    <Compile Include="InterviewQuestions\ZeroMatrix.cs" />
     <Compile Include="TechnicalQuestions\DifferenceK.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TechnicalQuestions\EqualPolynomials.cs" />

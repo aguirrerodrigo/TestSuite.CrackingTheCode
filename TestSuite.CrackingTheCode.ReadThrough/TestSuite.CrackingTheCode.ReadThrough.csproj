@@ -49,6 +49,7 @@
     <Compile Include="InterviewQuestions\PalindromePermutation.cs" />
     <Compile Include="InterviewQuestions\RotateMatrix.cs" />
     <Compile Include="InterviewQuestions\StringCompression.cs" />
+    <Compile Include="InterviewQuestions\StringRotation.cs" />
     <Compile Include="InterviewQuestions\Urlify.cs" />
     <Compile Include="InterviewQuestions\ZeroMatrix.cs" />
     <Compile Include="TechnicalQuestions\DifferenceK.cs" />

@@ -37,5 +37,51 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
 
             return true;
         }
+
+        public bool OptimizedNoToLower(string s)
+        {
+            var alphabet = new int['z' - 'a' + 1];
+            var oddCount = 0;
+            foreach (var c in s)
+            {
+                var index = GetCharIndex(c);
+                if (index < 0 || index >= alphabet.Length)
+                    continue;
+
+                alphabet[index]++;
+                if (alphabet[index] % 2 == 1)
+                    oddCount++;
+                else
+                    oddCount--;
+            }
+
+            return oddCount <= 1;
+        }
+
+        public bool OptimizedBitVector(string s)
+        {
+            var alphabet = 0;
+            foreach(var c in s)
+            {
+                var index = GetCharIndex(c);
+                if (index < 0)
+                    continue;
+
+                var val = 1 << index;
+                alphabet ^= val;
+            }
+
+            return (alphabet & (alphabet - 1)) == 0;
+        }
+
+        private int GetCharIndex(char c)
+        {
+            if (c >= 'A' && c <= 'Z')
+                return c - 'A';
+            else if (c >= 'a' && c <= 'z')
+                return c - 'a';
+            else
+                return -1;
+        }
     }
 }

@@ -46,5 +46,31 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
 
             return result;
         }
+
+        public string Optimized(string s)
+        {
+            if (s.Length == 0)
+                return s;
+
+            StringBuilder builder = new StringBuilder();
+
+            var count = 0;
+            for (var i = 0; i < s.Length; i++)
+            {
+                count++;
+                if (i + 1 >= s.Length || s[i] != s[i + 1])
+                {
+                    builder.Append(s[i]);
+                    builder.Append(count);
+                    count = 0;
+                }
+            }
+
+            var result = builder.ToString();
+            if (result.Length > s.Length)
+                result = s;
+
+            return result;
+        }
     }
 }

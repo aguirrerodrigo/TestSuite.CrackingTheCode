@@ -27,5 +27,32 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions
             // Assert
             result.ShouldBeTrue();
         }
+
+        [TestMethod]
+        public void TestOptimizedNoToLower()
+        {
+            // Arrange
+            var s = "Tact coazZ";
+
+            // Act
+            var result = sut.OptimizedNoToLower(s);
+
+            // Assert
+            result.ShouldBeTrue();
+        }
+
+        [TestMethod]
+        public void TestOptimizedBitVector()
+        {
+            // Arrange
+            var s = "Tact coazZ";
+
+            // Act
+            var result = sut.OptimizedBitVector(s);
+
+            // Assert
+            result.ShouldBeTrue();
+        }
+
     }
 }

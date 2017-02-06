@@ -28,5 +28,19 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions
             // Assert
             result.ShouldBeTrue();
         }
+
+        [TestMethod]
+        public void TestIsRotation_DifferentLength()
+        {
+            // Arrange
+            var s1 = "waterbottlew";
+            var s2 = "erbottlewat";
+
+            // Act
+            var result = sut.IsRotation(s1, s2);
+
+            // Assert
+            result.ShouldBeFalse();
+        }
     }
 }

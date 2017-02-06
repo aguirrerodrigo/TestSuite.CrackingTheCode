@@ -81,5 +81,37 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
 
             return true;
         }
+
+        public bool BitShift(string s)
+        {
+            int collection = 0;
+            foreach(var c in s)
+            {
+                this.Counter.Increment();
+
+                var val = c - 'a';
+                var charPlace = 1 << val;
+                if ((collection & charPlace) > 0)
+                    return false;
+                collection |= charPlace;
+            }
+            return true;
+        }
+
+        public bool BitShiftLong(string s)
+        {
+            long collection = 0;
+            foreach (var c in s)
+            {
+                this.Counter.Increment();
+
+                var val = c - 'a';
+                var charPlace = (long)1 << val;
+                if ((collection & charPlace) > 0)
+                    return false;
+                collection |= charPlace;
+            }
+            return true;
+        }
     }
 }

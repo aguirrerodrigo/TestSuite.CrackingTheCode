@@ -43,5 +43,33 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions
             // Assert
             result.ShouldBeTrue();
         }
+
+        [TestMethod]
+        public void TestNLogNCorrect()
+        {
+            // Arrange
+            var s1 = "abbc";
+            var s2 = "cabb";
+
+            // Act
+            var result = sut.NLogNCorrect(s1, s2);
+
+            // Assert
+            result.ShouldBeTrue();
+        }
+
+        [TestMethod]
+        public void TestNCorrect()
+        {
+            // Arrange
+            var s1 = "abbc";
+            var s2 = "cabb";
+
+            // Act
+            var result = sut.NCorrect(s1, s2);
+
+            // Assert
+            result.ShouldBeTrue();
+        }
     }
 }

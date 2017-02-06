@@ -9,6 +9,12 @@
     {
         public bool IsRotation(string s1, string s2)
         {
+            if (s1 == null || s2 == null || s1.Length != s2.Length)
+                return false;
+
+            if (s1 == s2)
+                return true;
+
             var concat = string.Concat(s2, s2);
             return concat.Contains(s1);
         }

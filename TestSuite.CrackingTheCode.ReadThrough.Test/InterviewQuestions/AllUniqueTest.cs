@@ -83,5 +83,37 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions
             // Analyze
             sut.Counter.Print(s.Length);
         }
+
+        [TestMethod]
+        public void TestBitShift()
+        {
+            // Arrange
+            var s = "abcdefghijklmnopqrstuvwxyza";
+
+            // Act
+            var result = sut.BitShift(s);
+
+            // Assert
+            result.ShouldBeFalse();
+
+            // Analyze
+            sut.Counter.Print(s.Length);
+        }
+
+        [TestMethod]
+        public void TestBitShiftLong()
+        {
+            // Arrange
+            var s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+            // Act
+            var result = sut.BitShiftLong(s);
+
+            // Assert
+            result.ShouldBeTrue();
+
+            // Analyze
+            sut.Counter.Print(s.Length);
+        }
     }
 }

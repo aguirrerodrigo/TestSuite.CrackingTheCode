@@ -91,5 +91,41 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions
             // Analyze
             sut.Counter.Print(s.Length + s.Length);
         }
+
+        [TestMethod]
+        public void TestOptimizedBetter()
+        {
+            // Arrange
+            var s = "Mr John Smith    ".ToCharArray();
+            var stringLength = 13;
+
+            // Act
+            sut.OptimizedBetter(s, stringLength);
+            var result = new string(s);
+
+            // Assert
+            result.ShouldEqual("Mr%20John%20Smith");
+
+            // Analyze
+            sut.Counter.Print(s.Length + s.Length);
+        }
+
+        [TestMethod]
+        public void TestOptimizedBetter_Long()
+        {
+            // Arrange
+            var s = "Mr John Smith Mr John Smith Mr John Smith Mr John Smith                      ".ToCharArray();
+            var stringLength = 55;
+
+            // Act
+            sut.OptimizedBetter(s, stringLength);
+            var result = new string(s);
+
+            // Assert
+            result.ShouldEqual("Mr%20John%20Smith%20Mr%20John%20Smith%20Mr%20John%20Smith%20Mr%20John%20Smith");
+
+            // Analyze
+            sut.Counter.Print(s.Length + s.Length);
+        }
     }
 }

@@ -40,5 +40,31 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions
             // Assert
             result.ShouldEqual("a2b1c5a3");
         }
+
+        [TestMethod]
+        public void TestOptimized_SameString()
+        {
+            // Arrange
+            var s = "abcdefghi";
+
+            // Act
+            var result = sut.Optimized(s);
+
+            // Assert
+            result.ShouldEqual("abcdefghi");
+        }
+
+        [TestMethod]
+        public void TestOptimizede_Compress()
+        {
+            // Arrange
+            var s = "aabcccccaaa";
+
+            // Act
+            var result = sut.Optimized(s);
+
+            // Assert
+            result.ShouldEqual("a2b1c5a3");
+        }
     }
 }

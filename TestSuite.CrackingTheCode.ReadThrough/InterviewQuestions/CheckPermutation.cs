@@ -46,6 +46,35 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
             return isPermutation;
         }
 
+        public bool NLogNCorrect(string s1, string s2)
+        {
+            if (s1.Length != s2.Length)
+                return false;
+
+            var c1 = s1.ToCharArray();
+            var c2 = s2.ToCharArray();
+
+            Array.Sort(c1);
+            Array.Sort(c2);
+
+            return new string(c1) == new string(c2);
+        }
+
+        public bool NCorrect(string s1, string s2)
+        {
+            var chars = new int[127];
+            foreach (var c in s1)
+                chars[c]++;
+
+            foreach (var c in s2)
+            {
+                chars[c]--;
+                if (chars[c] < 0)
+                    return false;
+            }
+            return true;
+        }
+
         public bool N(string shorter, string longer)
         {
             if (shorter.Length == 0)

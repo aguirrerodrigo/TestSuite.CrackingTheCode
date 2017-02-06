@@ -132,8 +132,8 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
 
         public void Optimized2(Matrix<int> matrix)
         {
-            var zeroRows = new HashSet<int>();
-            var zeroColumns = new HashSet<int>();
+            var zeroRows = new bool[matrix.Rows];
+            var zeroColumns = new bool[matrix.Columns];
             for(int i = 0; i < matrix.Rows; i++)
             {
                 for(int j = 0; j < matrix.Columns; j++)
@@ -141,20 +141,95 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
                     var n = matrix[i, j];
                     if(n == 0)
                     {
-                        zeroRows.Add(i);
-                        zeroColumns.Add(j);
+                        zeroRows[i] = true;
+                        zeroColumns[j] = true;
                     }
                 }
             }
 
-            foreach(var row in zeroRows)
+            for(int i = 0; i < zeroRows.Length; i++)
             {
-                matrix.SetAllRow(row, 0);
+                if(zeroRows[i])
+                    matrix.SetAllRow(i, 0);
             }
 
-            foreach(var column in zeroColumns)
+            for(int i = 0; i < zeroColumns.Length; i++)
             {
-                matrix.SetAllColumn(column, 0);
+                if(zeroColumns[i])
+                matrix.SetAllColumn(i, 0);
+            }
+        }
+
+        public void Optimized3(Matrix<int> matrix)
+        {
+            var shouldClearFirstRow = false;
+            var shouldClearFirstColumn = false;
+
+            for(int i = 0; i < matrix.Rows; i++)
+            {
+                if(matrix[i, 0] == 0)
+                {
+                    shouldClearFirstRow = true;
+                    break;
+                }
+            }
+            
+            for(int i = 0; i < matrix.Columns; i++)
+            {
+                if(matrix[0, i] == 0)
+                {
+                    shouldClearFirstColumn = true;
+                    break;
+                }
+            }
+
+            for(int i = 0; i < matrix.Rows; i++)
+            {
+                for(int j = 0; j < matrix.Columns; j++)
+                {
+                    if(matrix[i, j] == 0)
+                    {
+                        matrix[0, j] = 0;
+                        matrix[i, 0] = 0;
+                    }
+                }
+            }
+
+            // clear columns
+            for(int col = 1; col < matrix.Columns; col++)
+            {
+                if(matrix[0, col] == 0)
+                {
+                    for(int row = 1; row < matrix.Rows; row++)
+                    {
+                        matrix[row, col] = 0;
+                    }
+                }
+            }
+
+            // clear rows
+            for(int row = 1; row < matrix.Rows; row++)
+            {
+                if(matrix[row, 0] == 0)
+                {
+                    for(int col = 1; col < matrix.Columns; col++)
+                    {
+                        matrix[row, col] = 0;
+                    }
+                }
+            }
+
+            if(shouldClearFirstColumn)
+            {
+                for (int row = 0; row < matrix.Rows; row++)
+                    matrix[row, 0] = 0;
+            }
+
+
+            if (shouldClearFirstRow)
+            {
+                for (int col = 0; col < matrix.Columns; col++)
+                    matrix[0, col] = 0;
             }
         }
     }

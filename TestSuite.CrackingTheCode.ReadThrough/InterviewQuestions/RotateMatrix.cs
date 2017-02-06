@@ -27,6 +27,21 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
             return result;
         }
 
+        public Matrix<int> BruteForce(Matrix<int> matrix)
+        {
+            var result = new Matrix<int>(matrix.Columns, matrix.Rows);
+            
+            for (var row = 0; row < result.Rows; row++)
+            {
+                for (var column = 0; column < result.Columns; column++)
+                {
+                    result[row, column] = matrix[result.Columns - column - 1, row];
+                }
+            }
+
+            return result;
+        }
+
         public void InPlace(int[][] matrix, int size)
         {
             for (var row = 0; row < size / 2; row++)
@@ -38,6 +53,21 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
                     matrix[column][size - row - 1] = matrix[size - row - 1][size - column - 1];
                     matrix[size - row - 1][size - column - 1] = matrix[size - column - 1][row];
                     matrix[size - column - 1][row] = n;
+                }
+            }
+        }
+
+        public void InPlace(Matrix<int> matrix)
+        {
+            for (var row = 0; row < matrix.Rows / 2; row++)
+            {
+                for (var column = row; column < matrix.Columns - row - 1; column++)
+                {
+                    var n = matrix[row, column];
+                    matrix[row, column] = matrix[matrix.Rows - column - 1, row];
+                    matrix[matrix.Rows - column - 1, row] = matrix[matrix.Rows - row - 1, matrix.Columns - column - 1];
+                    matrix[matrix.Rows - row - 1, matrix.Columns - column - 1] = matrix[column, matrix.Columns - row - 1];
+                    matrix[column, matrix.Columns - row - 1] = n;
                 }
             }
         }

@@ -74,6 +74,37 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
             }
         }
 
+        public void OptimizedBetter(char[] s, int stringLength)
+        {
+            int spaceCount = 0;
+            for (int i = 0; i < stringLength; i++)
+            {
+                this.Counter.Increment();
+                if (s[i] == ' ')
+                    spaceCount++;
+            }
+
+            var index = stringLength + (spaceCount * 2) - 1;
+            for(int i = stringLength - 1; i >= 0; i--)
+            {
+                this.Counter.Increment();
+
+                var c = s[i];
+                if(c == ' ')
+                {
+                    s[index] = '0';
+                    s[index - 1] = '2';
+                    s[index - 2] = '%';
+                    index -= 3;
+                }
+                else
+                {
+                    s[index] = c;
+                    index--;
+                }
+            }
+        }
+
         public void MoveRight(char[] s, int startIndex, int endIndex, int right)
         {
             for(int i = endIndex; i >= startIndex; i --)

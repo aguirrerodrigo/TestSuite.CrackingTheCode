@@ -82,8 +82,8 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions
         public void TestOptimized_Replace()
         {
             // Arrange
-            var s1 = "abcdefghi";
-            var s2 = "abcdexghi";
+            var s1 = "bbcdefghi";
+            var s2 = "abcdefghi";
 
             // Act
             var result = sut.Optimized(s1, s2);

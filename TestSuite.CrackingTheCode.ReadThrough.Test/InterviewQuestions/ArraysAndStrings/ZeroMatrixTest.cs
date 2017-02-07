@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Should;
-using TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions;
+using TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.ArraysAndStrings;
 
-namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions
+namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.ArraysAndStrings
 {
     [TestClass]
     public class ZeroMatrixTest

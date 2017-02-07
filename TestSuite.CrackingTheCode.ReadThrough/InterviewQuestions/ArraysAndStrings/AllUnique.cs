@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using TestSuite.CrackingTheCode.ReadThrough.Utils;
 
-namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
+namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.ArraysAndStrings
 {
     /// <summary>
     /// Implement an algorithm to determine if a string has all unique characters. What if you

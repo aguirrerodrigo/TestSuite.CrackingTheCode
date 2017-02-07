@@ -1,4 +1,4 @@
-﻿namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
+﻿namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.ArraysAndStrings
 {
     /// <summary>
     /// Assume you have a method isSubst ring which checks if one word is a substring

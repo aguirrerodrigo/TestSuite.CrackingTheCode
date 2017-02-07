@@ -56,15 +56,15 @@
   <ItemGroup>
     <Compile Include="BigO\ReverseArrayTest.cs" />
     <Compile Include="BigO\SumOfDigitsTest.cs" />
-    <Compile Include="InterviewQuestions\AllUniqueTest.cs" />
-    <Compile Include="InterviewQuestions\CheckPermutationTest.cs" />
-    <Compile Include="InterviewQuestions\OneOrZeroEditsTest.cs" />
-    <Compile Include="InterviewQuestions\PalindromePermutationTest.cs" />
-    <Compile Include="InterviewQuestions\RotateMatrixTest.cs" />
-    <Compile Include="InterviewQuestions\StringCompressionTest.cs" />
-    <Compile Include="InterviewQuestions\StringRotationTest.cs" />
-    <Compile Include="InterviewQuestions\UrlifyTest.cs" />
-    <Compile Include="InterviewQuestions\ZeroMatrixTest.cs" />
+    <Compile Include="InterviewQuestions\ArraysAndStrings\AllUniqueTest.cs" />
+    <Compile Include="InterviewQuestions\ArraysAndStrings\CheckPermutationTest.cs" />
+    <Compile Include="InterviewQuestions\ArraysAndStrings\OneOrZeroEditsTest.cs" />
+    <Compile Include="InterviewQuestions\ArraysAndStrings\PalindromePermutationTest.cs" />
+    <Compile Include="InterviewQuestions\ArraysAndStrings\RotateMatrixTest.cs" />
+    <Compile Include="InterviewQuestions\ArraysAndStrings\StringCompressionTest.cs" />
+    <Compile Include="InterviewQuestions\ArraysAndStrings\StringRotationTest.cs" />
+    <Compile Include="InterviewQuestions\ArraysAndStrings\UrlifyTest.cs" />
+    <Compile Include="InterviewQuestions\ArraysAndStrings\ZeroMatrixTest.cs" />
     <Compile Include="TechnicalQuestions\DifferenceKTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TechnicalQuestions\EqualPolynomialsTest.cs" />

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
+﻿namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.ArraysAndStrings
 {
     /// <summary>
     /// There are three types of edits that can be performed on strings: insert a character,

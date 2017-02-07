@@ -1,7 +1,6 @@
-﻿using System;
-using TestSuite.CrackingTheCode.ReadThrough.Utils;
+﻿using TestSuite.CrackingTheCode.ReadThrough.Utils;
 
-namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
+namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.ArraysAndStrings
 {
     /// <summary>
     /// URLify: Write a method to replace all spaces in a string with '%20'. You may assume that the string

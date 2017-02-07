@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
+namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.ArraysAndStrings
 {
     /// <summary>
     /// Write an algorithm such that if an element in an MxN matrix is 0, its entire row and

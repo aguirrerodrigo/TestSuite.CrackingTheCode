@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
+﻿namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.ArraysAndStrings
 {
     /// <summary>
     /// Given an image represented by an NxN matrix, where each pixel in the image is 4

@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
+namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.ArraysAndStrings
 {
     /// <summary>
     /// Check Permutation: Given two strings, write a method to decide if one is a permutation of the

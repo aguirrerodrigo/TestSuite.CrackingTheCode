@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
+namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.ArraysAndStrings
 {
     /// <summary>
     /// Implement a method to perform basic string compression using the counts

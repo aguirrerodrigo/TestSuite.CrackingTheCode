@@ -1,4 +1,4 @@
-﻿namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions
+﻿namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.ArraysAndStrings
 {
     public class Matrix<T>
     {

@@ -7,7 +7,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.LinkedLists
     /// </summary>
     public class KthToTheLast
     {
-        public int BruteForce(MyLinkedList<int> linkedList, int k)
+        public int BruteForce(SinglyLinkedList<int> linkedList, int k)
         {
             if (k <= 0)
                 throw new ArgumentException("k should be greater than 0.");
@@ -26,7 +26,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.LinkedLists
             throw new IndexOutOfRangeException("Linkedlist too short to find kth to last.");
         }
 
-        private MyNode<int> GetNextNthNode(MyNode<int> node, int n)
+        private SinglyLinkedListNode<int> GetNextNthNode(SinglyLinkedListNode<int> node, int n)
         {
             var current = node;
             for(int i = 0; i < n; i++)
@@ -37,7 +37,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.LinkedLists
         }
 
         private int?[] set;
-        public int Optimized(MyLinkedList<int> linkedList, int k)
+        public int Optimized(SinglyLinkedList<int> linkedList, int k)
         {
             set = new int?[k];
             var current = linkedList.First;
@@ -62,7 +62,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.LinkedLists
             set[set.Length - 1] = value;
         }
 
-        public int UseCount(MyLinkedList<int> linkedList, int k)
+        public int UseCount(SinglyLinkedList<int> linkedList, int k)
         {
             if (k <= 0)
                 throw new ArgumentException("k should be greater than 0.");
@@ -88,12 +88,12 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.LinkedLists
             return current.Value;
         }
 
-        public void Print(MyLinkedList<int> linkedList, int k)
+        public void Print(SinglyLinkedList<int> linkedList, int k)
         {
             PrintInternal(linkedList.First, k);
         }
         
-        private int PrintInternal(MyNode<int> node, int k)
+        private int PrintInternal(SinglyLinkedListNode<int> node, int k)
         {
             if (node == null)
                 return 0;
@@ -104,8 +104,8 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.LinkedLists
             return index;
         }
 
-        private MyNode<int> kthNode;
-        public int Recursive(MyLinkedList<int> linkedList, int k)
+        private SinglyLinkedListNode<int> kthNode;
+        public int Recursive(SinglyLinkedList<int> linkedList, int k)
         {
             RecursiveInternal(linkedList.First, k);
             if (kthNode == null)
@@ -114,7 +114,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.LinkedLists
                 return kthNode.Value;
         }
 
-        private int RecursiveInternal(MyNode<int> node, int k)
+        private int RecursiveInternal(SinglyLinkedListNode<int> node, int k)
         {
             if (node == null)
                 return 0;
@@ -126,7 +126,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.LinkedLists
             return index;
         }
 
-        public int Seek(MyLinkedList<int> linkedList, int k)
+        public int Seek(SinglyLinkedList<int> linkedList, int k)
         {
             if (k <= 0)
                 throw new ArgumentException("k should be greater than 0.");

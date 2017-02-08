@@ -7,42 +7,44 @@ using TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.LinkedLists;
 namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLists
 {
     [TestClass]
-    public class RemoveDupsTest
+    public class PartitionTest
     {
-        private RemoveDups sut;
+        private Partition sut;
 
         [TestInitialize]
         public void Setup()
         {
-            sut = new RemoveDups();
+            sut = new Partition();
         }
 
         [TestMethod]
         public void TestBruteForce()
         {
             // Arrange
-            var collection = new int[] { 1, 2, 1, 3, 4, 2, 5, 6 };
-            var linkedList = new LinkedList<int>(collection);
+            var input = new int[] { 3, 5, 8, 5, 10, 2, 1 };
+            var linkedList = new LinkedList<int>(input);
 
             // Act
-            sut.BruteForce(linkedList);
+            sut.BruteForce(linkedList, 5);
             var result = linkedList.ToArray();
 
-            result.ShouldEqual(1, 2, 3, 4, 5, 6);
+            // Assert
+            result.ShouldEqual(3, 2, 1, 5, 10, 5, 8);
         }
 
         [TestMethod]
-        public void TestNoTempBuffer()
+        public void TestBruteForce2()
         {
             // Arrange
-            var collection = new int[] { 1, 2, 1, 3, 4, 2, 5, 6 };
-            var linkedList = new LinkedList<int>(collection);
+            var input = new int[] { 7, 3, 5, 8, 5, 10, 2, 1 };
+            var linkedList = new LinkedList<int>(input);
 
             // Act
-            sut.NoTempBuffer(linkedList);
+            sut.BruteForce(linkedList, 5);
             var result = linkedList.ToArray();
 
-            result.ShouldEqual(1, 2, 3, 4, 5, 6);
+            // Assert
+            result.ShouldEqual(3, 2, 1, 8, 5, 10, 7, 5);
         }
     }
 }

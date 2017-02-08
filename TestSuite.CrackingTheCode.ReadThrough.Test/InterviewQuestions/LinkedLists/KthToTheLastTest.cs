@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Should;
 using TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.LinkedLists;
 
@@ -25,7 +20,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.BruteForce(linkedList, 1);
@@ -39,7 +34,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.BruteForce(linkedList, 2);
@@ -53,7 +48,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2, 3 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.BruteForce(linkedList, 2);
@@ -67,7 +62,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.BruteForce(linkedList, 4);
@@ -81,7 +76,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.Optimized(linkedList, 1);
@@ -95,7 +90,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.Optimized(linkedList, 2);
@@ -109,7 +104,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2, 3 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.Optimized(linkedList, 2);
@@ -123,7 +118,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.Optimized(linkedList, 4);
@@ -137,7 +132,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.UseCount(linkedList, 1);
@@ -151,7 +146,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.UseCount(linkedList, 2);
@@ -165,7 +160,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2, 3 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.UseCount(linkedList, 2);
@@ -179,7 +174,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.UseCount(linkedList, 4);
@@ -193,7 +188,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             sut.Print(linkedList, 4);
@@ -206,7 +201,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.Recursive(linkedList, 1);
@@ -220,7 +215,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.Recursive(linkedList, 2);
@@ -234,7 +229,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2, 3 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.Recursive(linkedList, 2);
@@ -248,7 +243,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.Recursive(linkedList, 4);
@@ -262,7 +257,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.Seek(linkedList, 1);
@@ -276,7 +271,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.Seek(linkedList, 2);
@@ -290,7 +285,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2, 3 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.Seek(linkedList, 2);
@@ -304,7 +299,7 @@ namespace TestSuite.CrackingTheCode.ReadThrough.Test.InterviewQuestions.LinkedLi
         {
             // Arrange
             var items = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            var linkedList = new MyLinkedList<int>(items);
+            var linkedList = new SinglyLinkedList<int>(items);
 
             // Act
             var result = sut.Seek(linkedList, 4);

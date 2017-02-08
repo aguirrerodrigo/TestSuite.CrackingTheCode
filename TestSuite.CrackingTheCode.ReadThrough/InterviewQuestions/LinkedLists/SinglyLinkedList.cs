@@ -2,12 +2,12 @@
 
 namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.LinkedLists
 {
-    public class MyLinkedList<T>
+    public class SinglyLinkedList<T>
     {
-        public MyNode<T> First { get; set; }
-        private MyNode<T> Last { get; set; }
+        public SinglyLinkedListNode<T> First { get; set; }
+        private SinglyLinkedListNode<T> Last { get; set; }
 
-        public MyLinkedList(params T[] values)
+        public SinglyLinkedList(params T[] values)
         {
             foreach(var val in values)
             {
@@ -19,19 +19,14 @@ namespace TestSuite.CrackingTheCode.ReadThrough.InterviewQuestions.LinkedLists
         {
             if (this.Last == null)
             {
-                this.Last = new MyNode<T>(value);
+                this.Last = new SinglyLinkedListNode<T>(value);
                 this.First = this.Last;
             }
             else
             {
-                this.Last.Next = new MyNode<T>(value);
+                this.Last.Next = new SinglyLinkedListNode<T>(value);
                 this.Last = this.Last.Next;
             }
-        }
-
-        public void RemoveNext(MyNode<T> node)
-        {
-            node.Next = node.Next.Next;
         }
 
         public T[] ToArray()

@@ -54,6 +54,7 @@
     <Compile Include="InterviewQuestions\ArraysAndStrings\ZeroMatrix.cs" />
     <Compile Include="InterviewQuestions\LinkedLists\DeleteMiddle.cs" />
     <Compile Include="InterviewQuestions\LinkedLists\KthToTheLast.cs" />
+    <Compile Include="InterviewQuestions\LinkedLists\Palindrome.cs" />
     <Compile Include="InterviewQuestions\LinkedLists\Partition.cs" />
     <Compile Include="InterviewQuestions\LinkedLists\SinglyLinkedList.cs" />
     <Compile Include="InterviewQuestions\LinkedLists\SinglyLinkedListNode.cs" />

@@ -67,6 +67,7 @@
     <Compile Include="InterviewQuestions\ArraysAndStrings\ZeroMatrixTest.cs" />
     <Compile Include="InterviewQuestions\LinkedLists\DeleteMiddleTest.cs" />
     <Compile Include="InterviewQuestions\LinkedLists\KthToTheLastTest.cs" />
+    <Compile Include="InterviewQuestions\LinkedLists\PalindromeTest.cs" />
     <Compile Include="InterviewQuestions\LinkedLists\PartitionTest.cs" />
     <Compile Include="InterviewQuestions\LinkedLists\RemoveDupsTest.cs" />
     <Compile Include="InterviewQuestions\LinkedLists\SumListsTest.cs" />
